@@ -1,0 +1,9 @@
+How to extract WAR file in intellij using gradle :
+================================================
+First of all, follow here : http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto-create-a-deployable-war-file
+
+(after above you might face some exceptions, ignore then just simply type following to run your project : ./gradlew bootRun)
+
+Then Build > artifact > Gradle : <project-name>.war
+
+This should create a WAR file in 'out' directory, one can put it in webapps of tomcat instance and run tomcat to see it live.
