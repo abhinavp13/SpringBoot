@@ -7,3 +7,10 @@ First of all, follow here : http://docs.spring.io/spring-boot/docs/current/refer
 Then Build > artifact > Gradle : <project-name>.war
 
 This should create a WAR file in 'out' directory, one can put it in webapps of tomcat instance and run tomcat to see it live.
+
+
+(
+To Kill Tomcat or any other server instance in windows:
+netstat -o -n -a | findstr <portnumber>
+taskkill /F /PID <task_id>
+)

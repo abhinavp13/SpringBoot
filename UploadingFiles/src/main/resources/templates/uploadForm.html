@@ -1,0 +1,37 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div>
+    <h3> Choose a file to upload, give a name your uploaded file and then click upload ! </h3>
+    <form method="POST" enctype="multipart/form-data" action="/upload">
+        <table>
+            <tr><td>File to upload:</td><td><input type="file" name="file" /></td></tr>
+            <tr><td>Name:</td><td><input type="text" name="name" /></td></tr>
+            <tr><td></td><td><input type="submit" value="Upload" /></td></tr>
+        </table>
+    </form>
+</div>
+
+<div th:if="${message}">
+    <font color="red">
+        <h4 th:text="${message}"/>
+    </font>
+</div>
+
+<div th:if="${SuccessMessage}">
+    <font color="green">
+        <h4 th:text="${SuccessMessage}"/>
+    </font>
+</div>
+
+
+<div>
+    <ul>
+        <li th:each="file : ${files}" th:text="${file}"></li>
+    </ul>
+</div>
+
+
+
+</body>
+</html>
